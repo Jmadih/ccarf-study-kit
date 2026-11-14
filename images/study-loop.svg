@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 315" width="980" height="315" role="img" aria-labelledby="t d">
+  <title id="t">CCAR-F study loop</title>
+  <desc id="d">Five steps: onboard with /cert-setup, study daily with /cert-today, fix mistakes with /cert-mistakes until mastered, take mock exams with a go/no-go at 70 percent, then exam day. Mistakes loop back into daily sessions; a weak mock loops back to re-planning.</desc>
+  <style>
+    .box   { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.5; }
+    .last  { fill: #ddf4ff; stroke: #54aeff; }
+    .h     { fill: #1f2328; font: 600 15px -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .cmd   { fill: #0969da; font: 600 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .m     { fill: #59636e; font: 12px -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .lbl   { fill: #59636e; font: italic 12px -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .ln    { stroke: #8c959f; stroke-width: 1.6; fill: none; }
+    .loop  { stroke: #0969da; stroke-width: 1.6; fill: none; stroke-dasharray: 5 4; }
+    .head  { fill: #8c959f; }
+    .headl { fill: #0969da; }
+    @media (prefers-color-scheme: dark) {
+      .box   { fill: #161b22; stroke: #30363d; }
+      .last  { fill: #0c2d4b; stroke: #1f6feb; }
+      .h     { fill: #e6edf3; }
+      .cmd   { fill: #4493f8; }
+      .m, .lbl { fill: #9198a1; }
+      .ln    { stroke: #6e7681; }
+      .loop  { stroke: #4493f8; }
+      .head  { fill: #6e7681; }
+      .headl { fill: #4493f8; }
+    }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head" d="M0 0 L10 5 L0 10 z"/></marker>
+    <marker id="al" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="headl" d="M0 0 L10 5 L0 10 z"/></marker>
+  </defs>
+
+  <!-- feedback loops -->
+  <path class="loop" d="M480 98 C480 48 305 48 305 96" marker-end="url(#al)"/>
+  <text class="lbl" x="392" y="40" text-anchor="middle">missed rules come back reworded</text>
+  <path class="loop" d="M685 222 C685 290 100 290 100 224" marker-end="url(#al)"/>
+  <text class="lbl" x="392" y="305" text-anchor="middle">mock #1 under ~70%? move the date and re-plan</text>
+
+  <!-- 1 -->
+  <rect class="box" x="20" y="100" width="160" height="120" rx="10"/>
+  <text class="h" x="100" y="132" text-anchor="middle">1 · Onboard</text>
+  <text class="cmd" x="100" y="157" text-anchor="middle">/cert-setup</text>
+  <text class="m" x="100" y="182" text-anchor="middle">exam date · days · time</text>
+  <text class="m" x="100" y="200" text-anchor="middle">→ dated my-plan.md</text>
+
+  <!-- 2 -->
+  <rect class="box" x="215" y="100" width="160" height="120" rx="10"/>
+  <text class="h" x="295" y="132" text-anchor="middle">2 · Study daily</text>
+  <text class="cmd" x="295" y="157" text-anchor="middle">/cert-today</text>
+  <text class="m" x="295" y="182" text-anchor="middle">learn · drill · lab</text>
+  <text class="m" x="295" y="200" text-anchor="middle">one question at a time</text>
+
+  <!-- 3 -->
+  <rect class="box" x="410" y="100" width="160" height="120" rx="10"/>
+  <text class="h" x="490" y="132" text-anchor="middle">3 · Fix mistakes</text>
+  <text class="cmd" x="490" y="157" text-anchor="middle">/cert-mistakes</text>
+  <text class="m" x="490" y="182" text-anchor="middle">reworded re-asks</text>
+  <text class="m" x="490" y="200" text-anchor="middle">2 in a row = mastered</text>
+
+  <!-- 4 -->
+  <rect class="box" x="605" y="100" width="160" height="120" rx="10"/>
+  <text class="h" x="685" y="132" text-anchor="middle">4 · Mock exams</text>
+  <text class="cmd" x="685" y="157" text-anchor="middle">60 Q · 120 min</text>
+  <text class="m" x="685" y="182" text-anchor="middle">scored by domain</text>
+  <text class="m" x="685" y="200" text-anchor="middle">mock #1 = go / no-go</text>
+
+  <!-- 5 -->
+  <rect class="box last" x="800" y="100" width="160" height="120" rx="10"/>
+  <text class="h" x="880" y="132" text-anchor="middle">5 · Exam day</text>
+  <text class="cmd" x="880" y="157" text-anchor="middle">≥ 75% per domain</text>
+  <text class="m" x="880" y="182" text-anchor="middle">light review day before</text>
+  <text class="m" x="880" y="200" text-anchor="middle">no new material</text>
+
+  <!-- forward arrows -->
+  <line class="ln" x1="182" y1="160" x2="211" y2="160" marker-end="url(#a)"/>
+  <line class="ln" x1="377" y1="160" x2="406" y2="160" marker-end="url(#a)"/>
+  <line class="ln" x1="572" y1="160" x2="601" y2="160" marker-end="url(#a)"/>
+  <line class="ln" x1="767" y1="160" x2="796" y2="160" marker-end="url(#a)"/>
+</svg>
